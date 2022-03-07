@@ -1,0 +1,25 @@
+{
+  "name": "wap",
+  "version": "1.0.0",
+  "description": "Implementation of binary search tree with custom user definied comparator function for WAP class",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebastianKrajnak/VUT_FIT_WAP.git"
+  },
+  "keywords": [
+    "javascript",
+    "js",
+    "bst",
+    "binarysearchtree"
+  ],
+  "author": "Sebastian Krajnak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sebastianKrajnak/VUT_FIT_WAP/issues"
+  },
+  "homepage": "https://github.com/sebastianKrajnak/VUT_FIT_WAP#readme"
+}
