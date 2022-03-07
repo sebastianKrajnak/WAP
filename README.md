@@ -1,4 +1,4 @@
-# VUT_FIT_WAP
+# WAP
 
 School projects from web applications class, focused on JS.
 
