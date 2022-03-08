@@ -1,6 +1,6 @@
 'use strict';
 
-function Tree (comparator) {
+export function Tree (comparator) {
     this.root = null;
     this.comparator = comparator;
 }
@@ -38,7 +38,9 @@ Tree.prototype.insertValue = function (value) {
 }
 
 Tree.prototype.inorder = function* () {
-    return 0;
+    yield* this.next(node.left);
+    yield node.value;
+    yield* this.next(node.right);
 }
 
 Tree.prototype.preorder = function*() {
@@ -49,4 +51,3 @@ Tree.prototype.postorder = function*() {
     return 0;
 }
 
-module.exports = Tree;

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Implementation of binary search tree with custom user definied comparator function for WAP class",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
