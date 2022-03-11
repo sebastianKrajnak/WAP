@@ -7,7 +7,7 @@ import { Tree } from "./tree.mjs";
 
 /// Testovací data, samozřejmě jde jen o příklad a pro finální
 /// hodnocení lze očekávat využití jiných dat
-let input = [5,7,2131345646,9,4,13,12415486];
+let input = [8,4,1,32,11];
 
 /// Knihovna musí poskytovat konstruktor Tree()
 /// Tento konstruktor očekává jediný parametr - řadící fukci, která
@@ -21,7 +21,7 @@ input.forEach(i => t.insertValue(i));
 /// Iterátorů  vrácených generátory preorder(), inorder() a postorder() je
 /// možné vytvořit více, vzájemně budou na sobě nezávislé. Předpokládejte,
 /// že v průběhu iterace nebudou vkládány nové prvky.
-console.log("Mix 2 iterátorů")
+/* console.log("Mix 2 iterátorů")
 let pre1 = t.preorder()
 console.log(pre1.next().value);
 console.log(pre1.next().value);
@@ -30,20 +30,31 @@ console.log(pre2.next().value);
 console.log(pre1.next().value);
 console.log(pre2.next().value);
 console.log(pre2.next().value);
-console.log(pre1.next().value);
+console.log(pre1.next().value); */
 
 /// Ukázka využití iterátoru získaného z generátoru preorder()
+let preArr = [];
+let inArr = [];
+let postArr = [];
+
 console.log("preorder")
 for (let n of t.preorder()) {
-	console.log(n);
+	//console.log(n);
+	preArr.push(n);
 }
+console.log("preorder: " + preArr);
+
 /// Ukázka využití iterátoru získaného z generátoru inorder()
 console.log("inorder")
 for (let n of t.inorder()) {
-	console.log(n);
+	//console.log(n);
+	inArr.push(n);
 }
+console.log("inorder: " + inArr);
 /// Ukázka využití iterátoru získaného z generátoru postorder()
 console.log("postorder")
 for (let n of t.postorder()) {
-	console.log(n);
+	//onsole.log(n);
+	postArr.push(n);
 }
+console.log("postarr: " + postArr);
