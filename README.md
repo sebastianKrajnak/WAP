@@ -7,9 +7,9 @@
 
 School projects from web applications class, focused on JS.
 
-First project:
-JavaScript library used for creation of binary trees without using classes added during ECMAScript 2015.
-Implementation of inorder, preorder, postorder methods using generators.
+### First project:
+JavaScript module (ES6 .mjs module) used for the creation of a binary tree with a custom comparator function (passed as a constructor arguement) using a prototypial method.
+Implementation of inorder, preorder, postorder traversal functions using generator functions.
 
 ## Running the code
 Run,
