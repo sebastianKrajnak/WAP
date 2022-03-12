@@ -1,0 +1,30 @@
+{
+  "name": "wap",
+  "version": "1.0.0",
+  "description": "School projects from web applications class, focused on JS.",
+  "main": "tree.mjs",
+  "type": "module",
+  "scripts": {
+    "test": "mocha",
+    "jsdoc": "jsdoc -c jsdoc.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebastianKrajnak/WAP.git"
+  },
+  "keywords": [
+    "binarysearchtree",
+    "bst",
+    "traversals"
+  ],
+  "author": "Sebastian Krajnak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sebastianKrajnak/WAP/issues"
+  },
+  "homepage": "https://github.com/sebastianKrajnak/WAP#readme",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^9.2.2"
+  }
+}
