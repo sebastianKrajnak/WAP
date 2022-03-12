@@ -2,6 +2,7 @@
 /**
  * @fileOverview Module implementing a binary search tree and basic traversal functions
  * @author Sebastian Krajnak
+ * @module tree
  */
 
 /**
@@ -38,16 +39,19 @@ function Node (value) {
  * Starts in root.
  * 
  * @function
- * @param {number|string} value 
+ * @param {number|string} value new value to be inserted into the tree
  */
 Tree.prototype.insertValue = function (value) {
     var nodeNew = new Node(value);
 
     /**
-     * 
-     * @param {*} newNode 
-     * @param {*} node 
-     * @param {*} compareFunc 
+     * Helper function to recursively compare existing and new Node's values and traverse
+     * down the tree based on the result, left if comparator function returns true, right if false
+     * and insert the new Node as a child.
+     * @function
+     * @param {Node} newNode new Node with insert value passed to parent function as param
+     * @param {Node} node existing Node to compare new value with
+     * @param {Function} compareFunc comparator function, saved in Tree constructor
      */
     const recursiveInsert = (newNode, node, compareFunc) => {
         if (compareFunc(newNode.value, node.value)) {
@@ -82,7 +86,7 @@ Tree.prototype.insertValue = function (value) {
  * Results in values sorted in an ascending order.
  * 
  * @generator
- * @param {Node} node node where to start the traversal, tree root by default
+ * @param {Node} node starting node for the traversal, tree root by default
  * @yields {number|string} iterator containing all values stored in the tree
  */
 Tree.prototype.inorder = function* (node = this.root) {
@@ -99,7 +103,7 @@ Tree.prototype.inorder = function* (node = this.root) {
  * root -> left subtree -> right subtree
  * 
  * @generator
- * @param {Node} node node where to start the traversal, tree root by default
+ * @param {Node} node starting node for the traversal, tree root by default
  * @yields {number|string} iterator containing all values stored in the tree
  */
 Tree.prototype.preorder = function* (node = this.root) {
@@ -116,7 +120,7 @@ Tree.prototype.preorder = function* (node = this.root) {
  * left subtree -> right subtree -> root
  * 
  * @generator
- * @param {Node} node node where to start the traversal, tree root by default
+ * @param {Node} node starting node for the traversal, tree root by default
  * @yields {number|string} iterator containing all values stored in the tree
  */
 Tree.prototype.postorder = function* (node = this.root) {
@@ -128,7 +132,7 @@ Tree.prototype.postorder = function* (node = this.root) {
 /**
  * Function used for testing the correct working of the inorder generator function.
  * @function
- * @param {Tree} tree 
+ * @param {Tree} tree existing BST to use for testing
  * @returns {Array} array of values stored in a BST acquired using in order traversal
  */
 Tree.prototype.inOrderTraversal = function (tree) {
@@ -143,7 +147,7 @@ Tree.prototype.inOrderTraversal = function (tree) {
 /**
  * Function used for testing the correct working of the preorder generator function.
  * @function
- * @param {Tree} tree 
+ * @param {Tree} tree existing BST to use for testing
  * @returns {Array} array of values stored in a BST acquired using pre order traversal
  */
 Tree.prototype.preOrderTraversal = function (tree) {
@@ -158,7 +162,7 @@ Tree.prototype.preOrderTraversal = function (tree) {
 /**
  * Function used for testing the correct working of the postorder generator function.
  * @function
- * @param {Tree} tree 
+ * @param {Tree} tree existing BST to use for testing
  * @returns {Array} array of values stored in a BST acquired using post order traversal
  */
 Tree.prototype.postOrderTraversal = function (tree) {
