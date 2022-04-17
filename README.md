@@ -1,4 +1,6 @@
-School project for web applications class, focused on JavaScript. The main goal of the project is to grasp the basic constructs of JS such as object prototypes, constructors, generators and iterators. It was forbidden to use classes added in ECMAScript 2015.
+# Binary search tree (WAP)
+School project for web applications class, focused on JavaScript. The main goal of the project is to grasp the basic constructs of JS such as object prototypes, constructors, generators and iterators. It was forbidden to use classes added in ECMAScript 2015. 
+Graded 8.7/10
 
 ## Project tasks
 1. Create a library that creates a binary search over any data type.
